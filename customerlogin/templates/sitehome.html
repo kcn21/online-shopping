@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}" >
+<body>
+  <body>
+
+  <form action="/payment/product/" method="post">{% csrf_token %}
+	<header>
+		<h1>Handyman</h1>
+		&nbsp;
+		<input type="text" name="search" placeholder="Search the products,brands and more" size="100px">
+		&nbsp;
+		<div class="container">
+		
+		
+			<!--div> <a href="/customerlogin/customerlogin/">LOGIN</a> </div>
+			&nbsp;
+		-->
+			<div><!--a href="/payment/product/">CART</a></div>-->
+			<input type="submit" value="cart" style="background-color:grey ;color:white; padding:3px; ">
+			&nbsp;
+			<a href="/customerlogin/logout/">LOGOUT</a>{%csrf_token%}
+			&nbsp;
+			<h1>welcome {{full_name}}<h1>
+
+            
+		</div>
+	</header>
+		<img src="{%static "register1.png" %}" width="1310">
+ 	<header>
+		<table>
+			<h2>Phones:</h2>
+			<center><tr><td><img src="{% static "iphone.jpg" %}" height="250" width="300"></td><td><img src="{% static "index3.jpg" %}" height="250" width="300"></td><td><img src="{% static "index2.jpg" %}" height="250" width="300"></td><td><img src="{% static "index1.jpg" %}" height="250" width="300"></td></tr>
+			<tr><td>iPhone X    Price:100000</td><td>Samsung Galaxy Price:50000</td><td>Nexus Price:35000</td><td>iPhone 7 Price:50000</td></tr>
+			<tr><td><input type="checkbox" name="phone1"  ><select name="q1"><option value="1">1</option><option value="2">2</option><option value="3">3</option></option><option value="4">4</option></option><option value="5">5</option></select></td> <td><input type="checkbox" name="phone2" ><select name="q2"><option value="1">1</option><option value="2">2</option><option value="3">3</option></option><option value="4">4</option></option><option value="5">5</option></select></td>
+			<td><input type="checkbox" name="phone3" ><select name="q3"><option value="1">1</option><option value="2">2</option><option value="3">3</option></option><option value="4">4</option></option><option value="5" >5</option></select></td><td><input type="checkbox" name="phone4"><select name="q4"><option value="1">1</option><option value="2">2</option><option value="3">3</option></option><option value="4">4</option></option><option value="5">5</option></select></td></tr>
+
+		</table>
+			
+				<center><input type="submit" value="Add to Cart" style="background-color:grey ;color:white; padding:3px;">
+
+	</header>
+ </form>
+
+
+</body>
+</html>

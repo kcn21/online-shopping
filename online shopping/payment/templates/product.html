@@ -1,0 +1,101 @@
+{% load static %}		
+<html><body>
+<form action="/customerlogin/sitehome/" method="post">
+<div >{% csrf_token %}
+    
+      <h1>BILLING AND CHECKOUT</h1>
+		
+    <div id="page">
+	<center>
+      <table id="cart">
+        <thead>
+          <tr>
+           
+            
+			<th>Product</th>
+            <th>&nbsp;</th>
+			<th>Cost</th>
+            
+          </tr>
+        </thead>
+		
+		
+	<tbody>
+	{% for key,value in item.items %}
+		<tr>
+		<td>
+		{{ key }} 
+		</td>
+		
+		<td>&nbsp;</td>
+		<td>
+		{{ value }}
+		</td>
+		</tr>
+	{% endfor %}	
+		<tr>
+		
+		<td>Total:</td>
+		
+		<td>&nbsp;</td>
+		<td>
+		{{total}}</td>
+		</tr>
+	  <!--
+  <tr>
+	<td>{{ add.itemstock }}</td>
+    <th class="fifth">&nbsp;</th>
+	<td></td>
+    <th class="fifth">&nbsp;</th>
+	<td>{{ add.itemcost }}</td>
+   
+  </tr>
+  
+  <tr>
+    <td class="light">Shipping & Tax</td>
+    <td colspan="3" class="light">&nbsp;</td>
+    <td>00</td>
+	
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="light">Total:</td>
+    <td colspan="3">&nbsp;</td>
+    <td colspan="2"><span class="thick">{{ add.itemcost }}</span></td>
+  </tr-->
+ 
+  </table><BR><BR>
+
+</tbody>
+<h1>Thank you for shopping with Handyman your total bill is:{{total}}</h1>
+ 		<input type="submit" value="Continue Shopping" style="background-color:grey ;color:white; padding:3px;">
+</form>
+ <style> 
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+  color: black	;
+  background: #3aafa9; 
+  padding: 25px ;
+}
+
+table{ border:2px solid black; border-spacing: 1; font-size:1.5em;
+background-color:grey; }
+img { border: 0; max-width: 100%; }
+
+h1 {
+  font-family: 'Fredoka One', Helvetica, Tahoma, sans-serif;
+  color: #fff;
+  text-shadow: 1px 2px 0 #7184d8;
+  font-size: 3.5em;
+  line-height: 1.1em;
+  padding: 6px 0;
+  font-weight: normal;
+  text-align: center;
+  background-color:grey;
+}
+  </style>
+  </body>
+  </html>

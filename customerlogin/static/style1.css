@@ -1,0 +1,8 @@
+body{background-image:url("login.jpg");
+background-size:cover;}	
+h4{display:inline;}
+input.a{width:180px, hight=50px,align:left;}
+input.b{width:180px,hight=50px;}
+input.c{background-color:green ,color:white,border:2px solid #336600,padding:3px;}
+
+

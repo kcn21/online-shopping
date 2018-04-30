@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}" >
+<body>
+  <body>
+
+  <form action="/payment/cart/" method="post">{% csrf_token %}
+	<header>
+		<h1>Handyman</h1>
+		&nbsp;
+		<input type="text" name="search" placeholder="Search the products,brands and more" size="100px">
+		&nbsp;
+		<div class="container">
+		<div> <a href="/customerlogin/customerlogin/">LOGIN</a> </div>
+		&nbsp;
+		<div><a href="">CART</a></div>
+		&nbsp;
+		<a href="/customerlogin/logout/">LOGOUT</a>{%csrf_token%}
+		&nbsp;
+		welcome {{full_name}}
+		
+		</div>
+	</header>
+		<img src="{%static "register1.png" %}" width="1310">
+ 	<header>
+		<table>
+			<h2>Phones:</h2>
+			<center><tr><td><img src="{% static "iphone.jpg" %}" height="250" width="300"></td><td><img src="{% static "index3.jpg" %}" height="250" width="300"></td><td><img src="{% static "index2.jpg" %}" height="250" width="300"></td><td><img src="{% static "index1.jpg" %}" height="250" width="300"></td></tr>
+			<tr><td><input type="checkbox" name="phone1"><select><option value="1">1</option><option value="2">2</option><option value="3">3</option></option><option value="4">4</option></option><option value="5">5</option></select></td> <td><input type="checkbox" name="phone2"><select><option value="1">1</option><option value="2">2</option><option value="3">3</option></option><option value="4">4</option></option><option value="5">5</option></select></td>
+			<td><input type="checkbox" name="phone3"><select><option value="1">1</option><option value="2">2</option><option value="3">3</option></option><option value="4">4</option></option><option value="5">5</option></select></td><td><input type="checkbox" name="phone4"><select><option value="1">1</option><option value="2">2</option><option value="3">3</option></option><option value="4">4</option></option><option value="5">5</option></select></td></tr>
+		</table>
+			<center><input type="submit" value="Add To Cart">
+			
+
+	</header>
+ </form>
+
+
+</body>
+</html>

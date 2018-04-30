@@ -1,0 +1,47 @@
+{% block content %}
+{% load static %}
+<html>
+<body>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<form action="/register/index/" method = "post">{% csrf_token %} 
+ <center>&nbsp; &nbsp;<img class="a" src="{% static "images1.jpg" %}" height="180">  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   <img class="b" src="{% static "register.jpg" %}" height=180>
+ <center> 
+<table>
+	<tr>
+	<td colspan="2" align="center"><h1>Create Account</h1></td>
+	</tr> 
+	<tr>
+	<td colspan="2" align="left"><h2>User Registration:</h2></td>
+	</tr>
+	<tr>
+	<td><h4>First Name*:</h4><input type="text" name="fname" palceholder="enter the first name" required></td>
+
+	<td><h4>Last Name*:</h4><input type="textfield" name="lname" palceholder="enter the last name" required></td>
+	</tr>
+	<tr>
+	<td ><h4>Mobile No.:</h4><input type = "text"  name="mobile" maxlength="10" required>
+    </td>
+	<td><h4>username</h4><input type="text" name="username" required>{{error3}}{% csrf_token %}</td>
+    <tr>
+	<tr>
+	<td colspan="2"><h4>Email:</h4> <input type="email" name="emailid" size="35" required ></td>
+	</tr>
+
+	<tr>
+	<td><h4>Password*:</h4>	<input type="password" width="10px" name="pwd" placeholder="type 8 digit password" style="width:180px; height=50px"> {{error1}}{% csrf_token %}
+	</td>
+	<td><h4>Retype Peassword*:</h4> <input type="password" name="cpwd" >{{error2}}{% csrf_token %}
+	
+	</td>
+	</tr>
+
+	<tr>
+	<td colspan="2"><input type="submit" value="submit" style="background-color:green ;color:white;border:2px solid #336600;padding:3px;">  <input type="reset" value="cancel" style="border:1px solid black ;padding:3px; align:right" ></td>
+	</tr>
+
+</table>
+</form>
+</body>
+</html>
+
+{% endblock %}

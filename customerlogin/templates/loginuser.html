@@ -1,0 +1,27 @@
+
+{% load static %}
+<html>
+<link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}">
+<body>
+	<p>{{error}}</p>
+<div id="login">
+<center>
+<form action="/customerlogin/auth/" method="post">{%csrf_token%}
+
+<table>
+	<tr>
+	<th><h1 style="color:#ec7063";>Customer Login</h1></th>
+	</tr>
+	<tr ><td ><h4> Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4> <input type="text" class="a" name="uname" id="uname" placeholder="username " style="width:180px; hight=50px; align"left";x></td></tr><br><br/></br><br><br><br><br>
+	<tr ><td><h4>Password:</h4><input type="password" class="b" name="pwd" id="pwd" placeholder="type atleast 8 digit password" style="width:180px; hight=50px;"> </td></tr>
+	 <p style="color:Red">{{error}}</p>
+    <tr><td><input type="submit" value="login" class="c" style="background-color:green ;color:white;border:2px solid #336600;padding:3px;"></td></tr>
+	<tr><td>Don't have an account?</td></tr>
+	<tr><td align="left"><a href="/register/getuserinfo/">Sign Up</a></td></tr>
+	<tr><td>Are you an Admin ?</td></tr>
+	<tr><td><a href="/admin/">Login Here</td></tr>
+</table>
+</form>
+</div>
+</body>
+<html>
